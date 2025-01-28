@@ -1,0 +1,202 @@
+/********** Custom Properties ***********/
+:root {
+  --fondo: #fff8e759; /* (negro grafito) */
+  --primario: #fff8e7; /* (rojo oscuro sofisticado) */
+  --secundario: #5c8fee; /* Tono para acentos o áreas secundarias */
+  --texto: #000000b0; /* (marron medioclaro) */
+}
+
+/********** Reset style ***********/
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5c8fee;
+  border-radius: 5px;
+}
+
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Raleway", serif;
+  background-color: var(--fondo);
+  color: var(--texto) !important;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.display-2 {
+  font-size: calc(1rem + 3.5vw);
+  font-weight: 500;
+  line-height: 1.2;
+  text-wrap: wrap;
+  text-align: center;
+}
+
+.display-4 {
+  font-weight: bold;
+}
+
+.div-2 {
+  margin-top: 100px;
+}
+
+.nav-link {
+  color: var(--texto);
+  font-weight: bold;
+}
+
+a {
+  color: var(--secundario);
+}
+a:hover {
+  color: white;
+}
+
+/********** Boostrap Styles **********/
+
+.display-1 {
+  font-weight: bold;
+}
+
+.navbar {
+  background-color: var(--primario) !important;
+}
+
+.navbar-brand img {
+  height: 40px;
+  width: auto;
+}
+
+.nav-item {
+  transition: all 0.5s ease-out;
+}
+
+.nav-item:hover {
+  background-color: var(--secundario);
+}
+
+.nav-link {
+  padding-left: 5px;
+  font-weight: 800;
+}
+
+.navbar-toggler {
+  color: var(--secundario);
+  border: 2px solid;
+}
+
+.navbar-toggler:focus {
+  text-decoration: none;
+  outline: 0;
+  box-shadow: 0 0 0 1px;
+}
+
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.img-hero {
+  width: 100%;
+  height: 100vh;
+  background-image: 
+    /* Gradiente para la transición al beige */ linear-gradient(
+      to bottom,
+      rgba(173, 216, 230, 1) 75%,
+      /* Color del hero */ rgba(255, 239, 221, 1) 100% /* Color beige */
+    ),
+    /* Gradiente original */
+      linear-gradient(
+        to top left,
+        rgba(0, 255, 255, 0.767),
+        rgba(0, 0, 255, 0.404)
+      );
+  background-size: cover;
+  background-position: center;
+}
+
+.img-hero p {
+  position: relative;
+  animation: dropFromTop 2s ease-out forwards;
+  margin-bottom: 350px;
+}
+
+.sobre-mi img {
+  width: 300px;
+  height: 300px;
+}
+
+.todo-h2 {
+  margin-top: 100px;
+}
+
+.tec-icons {
+  width: 70px;
+  height: 70px;
+}
+@keyframes dropFromTop {
+  0% {
+    top: -400px;
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    top: 0;
+  }
+}
+
+/********** My Styles **********/
+
+/* // X-Small devices (portrait phones, less than 576px)
+// No media query for `xs` since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .navbar-brand img {
+    height: 50px;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .navbar-brand img {
+    height: 55px;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .navbar-bran img {
+    height: 60px;
+  }
+  .sobre-mi p {
+    margin: 0;
+    text-align: justify; /* Opcional: alinear el texto */
+    max-width: 600px;
+  }
+  .nav-item:hover {
+    background-color: initial;
+  }
+}
+
+/* // X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}
+
+/* // XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {
+}
